@@ -68,7 +68,7 @@ function Login() {
                 createApi();
               }}
             >
-              <h2>Sign in</h2>
+              <h2>Admin Sign in</h2>
               <div className="inputbox">
                 <i class="fa fa-envelope"></i>
                 <input
@@ -90,12 +90,6 @@ function Login() {
                 <label>Password</label>
               </div>
               <button>Sign in</button>
-              <div className="sign">
-                <p>
-                  i don't have account!&nbsp;&nbsp;
-                  <Link to="/Signup">sign up </Link>
-                </p>
-              </div>
             </form>
           </div>
         </div>

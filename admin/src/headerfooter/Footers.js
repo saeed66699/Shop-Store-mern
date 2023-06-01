@@ -28,14 +28,14 @@ function Footers() {
                   aria-label="Your email"
                   aria-describedby="basic-addon2"
                 />
-                <div class="input-group-append">
+                {/* <div class="input-group-append">
                   <button
                     class="btn btn-sm btn-outline-white my-0"
                     type="button"
                   >
                     Sign up
                   </button>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>

@@ -4,7 +4,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  priceprice: {
+  price: {
     type: String,
     required: true,
   },

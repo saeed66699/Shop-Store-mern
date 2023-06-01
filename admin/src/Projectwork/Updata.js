@@ -24,12 +24,13 @@ function Updata() {
     });
   }, []);
   const handlesubmit = (e) => {
+    e.preventDefault();
     axios
       .put(`http://127.0.0.1:5000/alpha/update/${id}`, val)
       .then((res) => {
         navigate("/Addproduct");
       })
-      .catch(console.log("error"));
+      .catch(console.log("error1"));
   };
 
   return (
@@ -37,13 +38,8 @@ function Updata() {
       <section>
         <div className="form-box " style={{ height: "70vh" }}>
           <div className="form-value from-control">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handlesubmit();
-              }}
-            >
-              <h2>Addproducts</h2>
+            <form onSubmit={handlesubmit}>
+              <h2>UPdate products</h2>
               <div className="inputbox">
                 <input
                   value={val.title}

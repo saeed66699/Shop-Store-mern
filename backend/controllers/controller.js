@@ -63,7 +63,7 @@ const read_data = async (req, res) => {
 const update_data = async (req, res) => {
   try {
     var data = await product.findByIdAndUpdate(req.params.id, {
-      name: req.body.name,
+      title: req.body.title,
       price: req.body.price,
       description: req.body.description,
     });

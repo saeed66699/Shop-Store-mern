@@ -9,6 +9,7 @@ import Signup from "../Projectwork/Signup";
 import Products from "../Projectwork/Products";
 import Addproduct from "../Projectwork/Addproduct";
 import Updata from "../Projectwork/Updata";
+import PrivateRoute from "../Projectwork/PrivateRoute";
 
 function Routers() {
   const empty = {
@@ -17,6 +18,8 @@ function Routers() {
     email: "",
     city: "",
   };
+
+  const [count, setcount] = useState(0);
 
   //state for handling input
   const [handle, setHandle] = useState(empty);
@@ -68,14 +71,16 @@ function Routers() {
   return (
     <div>
       <Router>
-        <Headers />
+        <Headers count={count} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Products" element={<Products />} />
-          <Route path="/Signin" element={<Signin />} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Addproduct" element={<Addproduct />} />
-          <Route path="/Updata/:id" element={<Updata />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/Products" element={<Products />} />
+            <Route path="/Addproduct" element={<Addproduct />} />
+            <Route path="/Updata/:id" element={<Updata />} />
+          </Route>
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/Signupadmindevloper" element={<Signup />} />
         </Routes>
 
         <Footers />
